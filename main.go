@@ -84,7 +84,7 @@ func performScrape(url string) error {
 	ctx, cancel := chromedp.NewContext(allocatorContext)
 	defer cancel()
 
-	ctx, cancel = context.WithTimeout(ctx, 30*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, 10*time.Second)
 	defer cancel()
 
 	var content string
