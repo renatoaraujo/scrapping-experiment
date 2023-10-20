@@ -21,6 +21,9 @@ func main() {
 
 	pages := []string{
 		"https://www.linkedin.com/company/amazon/",
+		"https://www.linkedin.com/company/meta/",
+		"https://www.linkedin.com/company/google/",
+		"https://www.linkedin.com/company/bloomberg/",
 	}
 
 	wg.Add(len(pages))
@@ -78,7 +81,7 @@ func performScrape(url string) error {
 	ctx, cancel := chromedp.NewContext(allocatorContext, cOpts...)
 	defer cancel()
 
-	ctx, cancel = context.WithTimeout(ctx, 60*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, 10*time.Second)
 	defer cancel()
 
 	var body string
