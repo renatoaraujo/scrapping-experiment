@@ -1,38 +1,62 @@
-# Web Scraping Experiment
+# Scrapping Experiment
 
-This repository contains a simple script used for web scraping various pages to extract company information. It's designed as an experiment to understand and handle the scraping process, including challenges like handling redirects, page interaction, and data extraction.
+This project is an exploration of web scraping techniques using Go. It focuses on extracting data from professional networking and job search websites, specifically LinkedIn and Glassdoor.
 
-## Overview
+## Prerequisites
 
-The script targets specific URLs, initiating multiple scraping tasks concurrently. Each task navigates to a web page, interacts with elements to reveal content (if necessary), and extracts specific data, which is then displayed in the console.
+Before you begin, ensure you have met the following requirements:
 
-Here's what the script does:
+- You have installed Go 1.17 or higher. You can download and install Go from [here](https://golang.org/dl/).
 
-1. **Concurrent Scraping:** Launches several scraping tasks in parallel, each for a different URL.
-2. **Error Handling:** Logs and retries failed scraping tasks.
-3. **Page Interaction:** Uses a headless browser to interact with pages just like a human user might, including following redirects and clicking buttons.
-4. **Data Extraction:** Parses the final page content to extract specific pieces of company information.
+## Getting Started
 
-## Technology
+To install the scrapping experiment, follow these steps:
 
-This script is written in Go and uses the following key packages:
+1. Clone the repository to your local machine:
+   ```
+   git clone https://github.com/renatoaraujo/scrapping-experiment.git
+   ```
 
-- `chromedp`: A Go library for driving browsers (specifically Chrome) using the DevTools Protocol, used for navigation, page interaction, and content retrieval.
-- `goquery`: A Go library that provides jQuery-like functionality for parsing and querying HTML content.
+2. Navigate to the project directory:
+   ```
+   cd scrapping-experiment
+   ```
 
-## Running the Script
+3. Install the necessary Go dependencies:
+   ```
+   go mod download
+   ```
 
-To run the script, you need to have Go installed and configured on your machine. Then, you can clone this repository and run the script using the Go command line.
+## Usage
 
-```bash
-# Clone the repository
-git clone https://github.com/renatoaraujo/scrapping-experiment.git
+This project contains separate modules for LinkedIn and Glassdoor, each with its own functionality for scraping data from the respective websites.
 
-# Navigate to the repository directory
-cd scrapping-experiment
+### LinkedIn
 
-# Run the script
+To run the LinkedIn scraping script, navigate to the LinkedIn directory and run the following command:
+```
 go run main.go
 ```
 
-Please note that this script is an experiment and is not designed for production use. It serves as a demonstration of web scraping concepts and techniques.
+### Glassdoor
+
+To run the Glassdoor scraping script, navigate to the Glassdoor directory and run the following command:
+```
+go run main.go
+```
+
+## Contributing
+
+1. Fork the project.
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`.
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`.
+4. Push to the branch: `git push origin feature/AmazingFeature`.
+5. Open a pull request.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Project Link: [https://github.com/renatoaraujo/scrapping-experiment](https://github.com/renatoaraujo/scrapping-experiment)
